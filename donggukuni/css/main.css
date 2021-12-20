@@ -1,0 +1,17 @@
+
+.portfolio {background:#fcfcf4;}
+.portfolio:after {content:""; display:block; clear:both;}
+.portfolio .tab_menu {background:#d0e7af;width: 17%;padding:50px 20px;height:100%;position:fixed;left: 0;color:#fff;}
+.portfolio .tab_menu h1 {display:inline-block; font-size:52px; line-height:48px;}
+.portfolio .tab_menu h1 span {display:inline-block; width: 10px;height: 10px; background: #ff0054;border-radius: 100%;}
+.portfolio .tab_menu ul {position: relative;left: 80px;top: 60px;}
+.portfolio .tab_menu ul li {display:block;font-weight:lighter;margin-top: 10px; vertical-align:top;}
+.portfolio .tab_menu ul li a {display: block;background:#ccc;padding: 15px 15px; font-size:22px;}
+.portfolio .tab_menu ul li.active a { background:#ff0054;}
+.portfolio .tab_menu ul li:hover a {background:#ff0054; transition:.5s;}
+
+.portfolio .con {float: right;width: 70%;}
+.portfolio .tab_contents_s ul li {float:left;width: calc(100% -20px);padding:3% 0;min-height:535px;width: calc(100% /2);}
+.portfolio .tab_contents_s ul li a {display:block; text-align:center; }
+.portfolio .tab_contents_s ul li a img {max-width:80%;}
+.portfolio .tab_contents_s ul li a h2 {margin-top:20px; font-size:24px; color:#333; font-weight:lighter;]

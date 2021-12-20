@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>김지아 포트폴리오</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link rel="stylesheet" type="text/css" href="./css/sub.css">
+	<link rel="stylesheet" type="text/css" href="./css/contents.css">
+	<title>김지아 포트폴리오</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-3.4.1.slim.min.js"></script>
+	<script>
+		
+		$(document).on('click','.tab_menu li', function () {
+			$(this).siblings('li').removeClass('active');
+			$(this).addClass('active');
+			$('.tab_contents_s').hide();
+			$('.tab_contents_s:eq('+ $(this).index() +')').show();
+		});
+	
+	</script>
+</head>
+<body>
+	<!--portfolio 시작-->
+	<div class="portfolio">
+		<div class="tab_menu">
+			<h1>MY<br>WORK
+				<span></span>
+			</h1>
+			<ul>
+				<li class="active"><a>SITE</a></li>
+				<li><a>OTHER</a></li>
+				<li><a>INFORMATION</a></li>
+			</ul>
+		</div>
+		<!--con 시작-->
+		<div class="con">
+			<div class="tab_contents_s">
+				<ul>
+					<li>
+						<a href="./html/brain.html" target="_blank">
+							<img src="./img/con01.png">
+							<h2>한국뇌연구원<br>(국문&영문)</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/dhc_intro.html" target="_blank">
+							<img src="./img/con02.png">
+							<h2>대구보건대 인트로</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/sea.html" target="_blank">
+							<img src="./img/con03.png">
+							<h2>등대와바다</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/dhc50.html" target="_blank">
+							<img src="./img/con04.png">
+							<h2>대구보건대 50주년</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/with.html" target="_blank">
+							<img src="./img/con05.png">
+							<h2>동국대학교 위드캠퍼스</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/brain.html" target="_blank">
+							<img src="./img/con09.png">
+							<h2>한국항로교육센터</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/brain.html" target="_blank">
+							<img src="./img/con06.png">
+							<h2>대구보건대 인터넷원서접수</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/brain.html" target="_blank">
+							<img src="./img/con07.png">
+							<h2>대구보건대 내신성적산출</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/brain.html" target="_blank">
+							<img src="./img/con08.png">
+							<h2>세인블루텍</h2>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="tab_contents_s" style="display: none;">
+				<ul>
+					<li>
+						<a href="./html/brain.html" target="_blank">
+							<img src="./img/con01.png">
+							<h2>한국뇌연구원<br>(국문&영문)</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/brain.html" target="_blank">
+							<img src="./img/con02.png">
+							<h2>대구보건대 인트로</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/brain.html" target="_blank">
+							<img src="./img/con03.png">
+							<h2>등대와바다</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/brain.html" target="_blank">
+							<img src="./img/con04.png">
+							<h2>대구보건대 50주년</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/brain.html" target="_blank">
+							<img src="./img/con05.png">
+							<h2>동국대학교 위드캠퍼스</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/brain.html" target="_blank">
+							<img src="./img/con06.png">
+							<h2>대구보건대 인터넷원서접수</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/brain.html" target="_blank">
+							<img src="./img/con07.png">
+							<h2>대구보건대 내신성적산출</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/brain.html" target="_blank">
+							<img src="./img/con09.png">
+							<h2>한국항로교육센터</h2>
+						</a>
+					</li>
+					<li>
+						<a href="./html/brain.html" target="_blank">
+							<img src="./img/con08.png">
+							<h2>세인블루텍</h2>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="tab_contents_s" style="display: none;">
+			</div>
+		</div>
+		<!--con 끝-->
+	</div>
+	<!--portfolio 끝-->
+
+</body>
+</html>
