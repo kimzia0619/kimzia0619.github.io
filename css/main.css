@@ -11,7 +11,10 @@
 .portfolio .tab_menu ul li:hover a {background:#ff0054; transition:.5s;}
 
 .portfolio .con {float: right;width: 70%;}
-.portfolio .tab_contents_s ul li {float:left;width: calc(100% -20px);padding:3% 0;min-height:535px;width: calc(100% /2);}
-.portfolio .tab_contents_s ul li a {display:block; text-align:center; }
+.portfolio .tab_contents_s ul li {left:0; top:0; float:left;width: calc(100% -20px);padding:3% 0;min-height:535px;width: calc(100% /2); }
+.portfolio .tab_contents_s ul li:hover img{ transform: translateY( -20px ); transition:.3s;}
+.portfolio .tab_contents_s ul li a {display:block; text-align:center; outline:none;}
 .portfolio .tab_contents_s ul li a img {max-width:80%;}
+
 .portfolio .tab_contents_s ul li a h2 {margin-top:20px; font-size:24px; color:#333; font-weight:lighter;]
+
