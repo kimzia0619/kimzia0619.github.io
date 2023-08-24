@@ -10,7 +10,7 @@
 
 .portfolio .con {float: right; width: 75%;}
 .portfolio .tab_contents_s ul {flex-wrap:wrap; padding:5rem 0;}
-.portfolio .tab_contents_s ul li {position:relative; width: calc(100%/3 - 2rem); padding:3rem 0; top:0;}
+.portfolio .tab_contents_s ul li {position:relative; width: calc(100%/3 - 2rem); padding:3rem 0; top:0; transition: all .2s;}
 .portfolio .tab_contents_s ul li:hover {top:-10px; transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out;}
 .portfolio .tab_contents_s ul li a {display:block; text-align:center; outline:none;}
 .portfolio .tab_contents_s ul li a img {max-width:80%;}
