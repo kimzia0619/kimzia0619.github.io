@@ -52,7 +52,11 @@ url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype'
 }
 
 
-html,body {width:100%; height:100%;  font-family:'Noto Sans KR','Malgun Gothic','맑은고딕','Nanum Gothic','돋움',dotum,'굴림',gulim,Helvetica,sans-serif; letter-spacing:-0.3px; font-size:14px;}
+body, textarea, input, select, textarea, button {
+    font-family: 'Pretendard',"나눔고딕", NanumGothic, "Nanum Gothic","돋움", "Bootstrap-icons", Dotum, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
 body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, form, fieldset, input, table, tr, th, td, button,textarea {margin:0;padding:0}
 img,fieldset,iframe{border:0 none}
 legend, hr, caption{width:0;height:0;position:absolute;visibility:hidden;overflow:hidden;display:none;}
