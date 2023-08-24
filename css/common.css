@@ -73,7 +73,7 @@ url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype'
 
 
 body, textarea, input, select, textarea, button {
-    font-family: 'Pretendard',"나눔고딕", NanumGothic, "Nanum Gothic","돋움", "Bootstrap-icons", Dotum, Arial, sans-serif;
+    font-family: 'Pretendard','GmarketSans',"나눔고딕", NanumGothic, "Nanum Gothic","돋움", "Bootstrap-icons", Dotum, Arial, sans-serif;
     font-weight: 400;
     line-height: 1.5;
 }
