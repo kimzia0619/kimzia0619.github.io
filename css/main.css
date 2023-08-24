@@ -1,6 +1,6 @@
 
 .portfolio:after {content:""; display:block; clear:both;}
-.portfolio .tab_menu {background:#d0e7af;width: 15%;padding:50px 20px;height:100%;position:fixed;left: 0;color:#fff; box-sizing:border-box;}
+.portfolio .tab_menu {width: 15%;padding:50px 20px;height:100%;position:fixed;left: 0;color:#fff; box-sizing:border-box; border-right:1px solid #f0f0f0;}
 .portfolio .tab_menu h1 {display:inline-block; font-size:3rem; line-height:3.5rem; color:#4876ef;}
 .portfolio .tab_menu h1 span {display:inline-block; width: 10px;height: 10px; background: #ff0054;border-radius: 100%;}
 .portfolio .tab_menu ul {position: relative;left: 80px;top: 60px;}
