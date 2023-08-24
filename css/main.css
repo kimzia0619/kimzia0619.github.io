@@ -1,7 +1,7 @@
 
 .portfolio:after {content:""; display:block; clear:both;}
 .portfolio .tab_menu {width: 15%;padding:50px 20px;height:100%;position:fixed;left: 0;color:#fff; box-sizing:border-box; border-right:1px solid #f0f0f0;}
-.portfolio .tab_menu h1 {display:inline-block; font-size:3rem; line-height:3.5rem; color:#4876ef; margin-bottom:30px;}
+.portfolio .tab_menu h1 { display: inline-block;font-size: 2rem; line-height: 2.5rem; color: #4876ef; margin-bottom: 30px;font-family: GmarketSans;font-weight: 500;}
 .portfolio .tab_menu h1 span {display:inline-block; width: 10px;height: 10px; background: #ff0054;border-radius: 100%;}
 .portfolio .tab_menu ul li {display:block;font-weight:lighter;margin-top: 10px; vertical-align:top;}
 .portfolio .tab_menu ul li a {display: block;padding: 15px 15px; font-weight:bold; font-size:1.2rem; border-radius:5px; color:#5c667b;}
@@ -15,4 +15,4 @@
 .portfolio .tab_contents_s ul li a {display:block; text-align:center; outline:none;}
 .portfolio .tab_contents_s ul li a img {max-width:80%;}
 
-.portfolio .tab_contents_s ul li a h2 {margin-top:20px; font-size:24px; color:#333; font-weight:lighter;]
+.portfolio .tab_contents_s ul li a h2 {margin-top:20px; font-size:1.1rem; color:#444; font-family:'GmarketSans'; font-weight:lighter;}
