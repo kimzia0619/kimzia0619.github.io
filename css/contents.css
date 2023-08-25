@@ -9,12 +9,10 @@
 .contents .des.green {background:#2d8451;}
 
 
-.contents .des h1 {display:inline-block; font-size:52px; line-height:48px;}
+.contents .des {display:flex; justify-content:space-between; padding:30px; box-sizing:border-box; border-bottom:1px solid #f0f0f0;}
+.contents .des h1 {display: inline-block;font-size: 2rem; line-height: 2.5rem; color: #4876ef; font-family: GmarketSans;font-weight: 500;}
 .contents .des h1 span {display:inline-block; width: 10px;height: 10px; background: #ff0054;border-radius: 100%;}
-
-.contents .des ul {position:absolute; top:50%;}
-.contents .des ul li {display:inline-block;padding:10px 20px;background:#fff;border-radius:20px;margin:5px;width: 30%;text-align: center; color:#333; background:#fff;}
-.contents .des.pink li {width:auto;}
+.contents .des ul {display:flex;}
 
 .contents .visual {width: 80%;margin-top:50px;}
 .contents .visual .visual_wrap {position:relative;width: 70%;margin:0 auto;overflow:hidden;}
