@@ -9,7 +9,7 @@
 .tab_menu ul li:hover a,.tab_menu ul li.active a {background:#f4f6fa; color: #4876ef; transition:.5s;}
 .tab_menu ul li a i {margin-right:5px;}
 
-.portfolio .tab_contents_s ul {flex-wrap:wrap; padding:5rem 0;}
+.portfolio .tab_contents_s ul {flex-wrap:wrap; justify-content:center; padding:5rem 0;}
 .portfolio .tab_contents_s ul li {position:relative; width: calc(100%/3 - 2rem); padding:3rem 0; top:0; transition: all .2s;}
 .portfolio .tab_contents_s ul li:hover {top:-10px; transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out;}
 .portfolio .tab_contents_s ul li a {display:block; text-align:center; outline:none;}
@@ -17,9 +17,14 @@
 
 .portfolio .tab_contents_s ul li a h2 {margin-top:20px; font-size:1.1rem; color:#444; font-family:'GmarketSans'; font-weight:lighter;}
 
+
+
+
 @media all and (max-width:1200px){
-.portfolio .tab_contents_s ul {justify-content:center;}
+
+
 }
+
 
 @media all and (max-width:920px){
 
