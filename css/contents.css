@@ -11,6 +11,8 @@
 .contents .des.beige {background:#f1ede6;}
 .contents .des.bluegreen {background:#d9ecea;}
 .contents .des.gray {background:#aaa;}
+.contents .des.green {background:#2d8451;}
+
 
 .contents .des h1 {display:inline-block; font-size:52px; line-height:48px;}
 .contents .des h1 span {display:inline-block; width: 10px;height: 10px; background: #ff0054;border-radius: 100%;}
