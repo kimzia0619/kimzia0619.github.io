@@ -1,9 +1,4 @@
 
-
-
-
-.contents:after {content:""; display:block; clear:both;}
-.contents .des {background:#d0e7af;width: 17%;padding:50px 20px;height:100%;position:fixed;left: 0;color:#fff;}
 .contents .des.navy {background:#303958;}
 .contents .des.pink {background:#ffd1ea;}
 .contents .des.blue {background:#0086ff;}
