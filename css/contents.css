@@ -33,7 +33,7 @@
 .contents .des {display:block;}
 .contents .des ul {flex-wrap:wrap; margin-top: 20px;}
 .contents .des li {padding: 5px 10px; width: calc(100%/2 - 2rem);text-align: center;font-size: .9rem;}
-.contents .visual .visual_wrap {width:100%;}
+.contents .visual .visual_wrap {width:95%;}
 .contents .visual .visual_wrap h1 {font-size:2rem;}
 .contents .visual .visual_wrap ul li a {font-size:1rem;}
 
