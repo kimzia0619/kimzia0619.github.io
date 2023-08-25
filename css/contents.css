@@ -25,3 +25,18 @@
 .contents .visual .visual_wrap ul li a {display:block; font-size:18px; border:1px solid #333; color:#333; padding:10px 20px;}
 .contents .visual .visual_wrap ul li a:hover {color:#fff; background:#333; transition:.3s;}
 .contents .visual .visual_wrap  img {max-width: 100%; display: block;margin: 50px auto;}
+
+
+
+@media all and (max-width:920px){
+
+.contents .des {display:block;}
+.contents .des ul {flex-wrap:wrap; margin-top: 20px;}
+.contents .des li {padding: 5px 10px; width: calc(100%/2 - 2rem);text-align: center;font-size: .9rem;}
+.contents .visual .visual_wrap {width:100%;}
+.contents .visual .visual_wrap h1 {font-size:2rem;}
+.contents .visual .visual_wrap ul li a {font-size:1rem;}
+
+
+
+}
