@@ -2,6 +2,7 @@
 .tab_menu h1 {display: inline-block;font-size: 2rem; line-height: 2.5rem; color: #4876ef; font-family: GmarketSans;font-weight: 500;}
 .tab_menu h1 span {display:inline-block; width: 10px;height: 10px; background: #ff0054;border-radius: 100%;}
 .tab_menu ul {display:flex;} */
+.tab_menu {flex-wrap:wrap;}
 .tab_menu ul li {margin-left:1rem; min-width:200px;}
 .tab_menu ul li:first-child {margin-left:0;}
 .tab_menu ul li a {display: block;padding: 15px; font-weight:bold; text-align:center; font-size:1.2rem; border-radius:5px; color:#5c667b;}
@@ -15,3 +16,11 @@
 .portfolio .tab_contents_s ul li a img {max-width:80%;}
 
 .portfolio .tab_contents_s ul li a h2 {margin-top:20px; font-size:1.1rem; color:#444; font-family:'GmarketSans'; font-weight:lighter;}
+
+
+
+@media all and (max-width:920px){
+
+.tab_menu ul {margin-top:30px;}
+
+}
