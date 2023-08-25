@@ -22,5 +22,9 @@
 @media all and (max-width:920px){
 
 .tab_menu ul {margin-top:30px;}
+.portfolio .tab_contents_s ul {justify-content:center;}
+.portfolio .tab_contents_s ul li {width:calc(100%/2 - 2rem); padding:2rem 0;}
+
+
 
 }
