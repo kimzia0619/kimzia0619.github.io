@@ -1,12 +1,12 @@
 
-.contents .des.navy {background:#303958;}
+/* .contents .des.navy {background:#303958;}
 .contents .des.pink {background:#ffd1ea;}
 .contents .des.blue {background:#0086ff;}
 .contents .des.skyblue {background:#e7f0ff;}
 .contents .des.beige {background:#f1ede6;}
 .contents .des.bluegreen {background:#d9ecea;}
 .contents .des.gray {background:#aaa;}
-.contents .des.green {background:#2d8451;}
+.contents .des.green {background:#2d8451;} */
 
 
 .contents .des {display:flex; justify-content:space-between; padding:30px; box-sizing:border-box; border-bottom:1px solid #f0f0f0;}
