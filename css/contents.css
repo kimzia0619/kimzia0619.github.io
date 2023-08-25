@@ -14,11 +14,11 @@
 .contents .des h1 span {display:inline-block; width: 10px;height: 10px; background: #ff0054;border-radius: 100%;}
 .contents .des ul {display:flex; align-items:center; gap:1rem;}
 .contents .des ul li {border-radius:30px; padding:5px 15px; border:1px solid #ddd;}
-.contents .visual {width: 80%;margin-top:50px;}
+.contents .visual {margin-top:50px;}
 .contents .visual .visual_wrap {position:relative;width: 70%;margin:0 auto;overflow:hidden;}
 
-.contents .visual .visual_wrap h1 {display:inline-block; font-size:42px;}
-.contents .visual .visual_wrap ul {position:absolute;right: 90px;top: 0px;}
+.contents .visual .visual_wrap .title {justify-content:space-between; align-items:center;}
+.contents .visual .visual_wrap h1 {font-size:42px;}
 .contents .visual .visual_wrap ul li {display:inline-block; margin-left:10px;}
 .contents .visual .visual_wrap ul li:first-child {margin-left:0;}
 .contents .visual .visual_wrap ul li a {display:block; font-size:18px; border:1px solid #333; color:#333; padding:10px 20px;}
