@@ -4,6 +4,7 @@ body {width:100%; }
 
 .tab_menu {display:flex; flex-wrap:wrap; justify-content:space-between; padding:30px; box-sizing:border-box; border-bottom:1px solid #f0f0f0;}
 .tab_menu h1 {display: inline-block;font-size: 2rem; line-height: 2.5rem; color: #4876ef; font-family: GmarketSans;font-weight: 500;}
+.contents .des h1 a {display:block; color: #4876ef;}
 .tab_menu h1 span {display:inline-block; width: 10px;height: 10px; background: #ff0054;border-radius: 100%;}
 .tab_menu ul {display:flex;}
 
