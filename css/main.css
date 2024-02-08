@@ -59,6 +59,7 @@
 .tab_contents_s ul li {width:100%;}
 .tab_contents_s ul li .thumb {max-height:300px;}
 .tab_contents_s ul li .inform {flex-direction:column;}
+.tab_contents_s ul li:hover .inform span:first-child:before {width:0%;}
 
 
 }
