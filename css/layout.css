@@ -1,19 +1,39 @@
 @charset "utf-8";
 
-body {width:100%; }
 
-.tab_menu {display:flex; flex-wrap:wrap; justify-content:space-between; padding:30px; box-sizing:border-box; border-bottom:1px solid #f0f0f0;}
-.tab_menu h1 {display: inline-block;font-size: 2rem; line-height: 2.5rem; color: #4876ef; font-family: GmarketSans;font-weight: 500;}
-.contents .des h1 a {display:block; color: #4876ef;}
-.tab_menu h1 span {display:inline-block; width: 10px;height: 10px; background: #ff0054;border-radius: 100%;}
-.tab_menu ul {display:flex;}
+.header {padding:50px;box-sizing:border-box;border-bottom:1px solid #f0f0f0;position: fixed;background: #fff;width: 100%;z-index: 999;}
+.header h1 a {font-family:'LOTTERIACHAB';display:block;font-size:3rem;color: #222;font-weight: normal; text-align:center;}
+.header h1 span {display:inline-block; width: 10px;height: 10px; background: #ff0054;border-radius: 100%;}
 
-.flex {display:flex;}
-.footer {position:relative; background:#333;}
+.container {max-width:1500px; min-height:800px; padding-top: 15rem; margin:0 auto 150px auto;}
+
+#go-top {position:fixed; top:40px; right:50px; background:#333; width:100px; height:100px; border-radius:100%;}
+#go-top i {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#fff; font-size:2.5rem;}
+
+
+
+@media all and (max-width:1400px){
+
+
+.container {max-width:inherit; padding:15rem 2rem 2rem 2rem;}
+
+}
 
 
 
 @media all and (max-width:768px){
+
+.header {padding:30px;}
+.header h1 a {text-align:left; font-size:2rem;}
+.container {margin:0 auto; min-height:auto; padding:10rem 2rem 2rem 2rem;}
+.tab_menu ul li {min-width:auto;}
+.tab_menu ul li a {padding:10px;}
+.tab_contents_s ul li .inform {margin-top:20px;}
+.tab_contents_s ul li .thumb .img {padding:30px;}
+
+
+#go-top {width:60px; height:60px; top:20px; right:30px;}
+#go-top i {font-size:2rem;}
 
 
 }

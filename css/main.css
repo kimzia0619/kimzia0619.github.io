@@ -1,26 +1,44 @@
-/* .tab_menu {display:flex; justify-content:space-between; padding:30px; box-sizing:border-box; border-bottom:1px solid #f0f0f0;}
-.tab_menu h1 {display: inline-block;font-size: 2rem; line-height: 2.5rem; color: #4876ef; font-family: GmarketSans;font-weight: 500;}
-.tab_menu h1 span {display:inline-block; width: 10px;height: 10px; background: #ff0054;border-radius: 100%;}
-.tab_menu ul {display:flex;} */
+
+/*ÅÇ¸Þ´º*/
 .tab_menu {flex-wrap:wrap;}
-.tab_menu ul li {margin-left:1rem; min-width:200px;}
+.tab_menu ul {justify-content: center;}
+.tab_menu ul li {margin-left:1rem; min-width:150px;}
 .tab_menu ul li:first-child {margin-left:0;}
-.tab_menu ul li a {display: block;padding: 15px; font-weight:bold; text-align:center; font-size:1.2rem; border-radius:5px; color:#5c667b;}
-.tab_menu ul li:hover a,.tab_menu ul li.active a {background:#f4f6fa; color: #4876ef; transition:.5s;}
+.tab_menu ul li a {display: block;padding: 15px; font-weight:bold; text-align:center; font-size:1rem; border-radius:30px;}
+.tab_menu ul li:hover a {background:#f7f7f7; color:#333; transition:.3s;}
+.tab_menu ul li.active a {background:#333; color: #fff; transition:.3s;}
 .tab_menu ul li a i {margin-right:5px;}
 
-.portfolio .tab_contents_s ul {flex-wrap:wrap; justify-content:center; padding:5rem 0;}
-.portfolio .tab_contents_s ul li {position:relative; width: calc(100%/3 - 2rem); padding:3rem 0; top:0; transition: all .2s;}
-.portfolio .tab_contents_s ul li:hover {top:-10px; transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out;}
-.portfolio .tab_contents_s ul li a {display:block; text-align:center; outline:none;}
-.portfolio .tab_contents_s ul li a img {max-width:80%;}
+.tab_contents_s {margin-top:50px;}
+.tab_contents_s ul {display:flex; gap:5rem 3rem; flex-wrap:wrap; justify-content:center;}
+.tab_contents_s ul li {width:calc(100%/3 - 3rem); cursor:pointer;  transition:.5s;}
+.tab_contents_s ul li .thumb {max-height:400px; overflow:hidden;}
+.tab_contents_s ul li .thumb .img {position:relative; background:#f7f7f7; min-height:400px; padding:50px; transition:.5s;}
+.tab_contents_s ul li .thumb .img img {position:relative; width:100%; height:100%; object-fit:cover; box-shadow:0px 0px 20px #d4d4d4;}
+.tab_contents_s ul li .inform {justify-content:space-between;  margin-top:30px;}
+.tab_contents_s ul li .inform span {position:relative; display:block; text-align:center; font-weight:600; color:#000; font-size:1.2rem;}
+.tab_contents_s ul li .inform span:last-child {font-size:1rem; color:#999;}
+.tab_contents_s ul li .inform span:first-child:before {content:""; display:block; position:absolute; bottom:-1px; width:0; height:1px; background:#333; transition:.3s ease-in-out;}
+.tab_contents_s ul li:hover .inform span:first-child:before {width:100%;}
 
-.portfolio .tab_contents_s ul li a h2 {margin-top:20px; font-size:1.1rem; color:#444; font-family:'GmarketSans'; font-weight:lighter;}
-
+.tab_contents_s ul li.bluegreen .img:before {content:""; width:100%; height:100%; position:absolute; top:0; left:0; display:block; background:linear-gradient(90deg, rgba(0,102,177,1) 0%, rgba(113,191,69,1) 100%); transition:.5s; opacity:0;}
+.tab_contents_s ul li.bluegreen:hover .img:before {opacity:1;}
+.tab_contents_s ul li:hover .img img {box-shadow:none;}
+.tab_contents_s ul li.green:hover .img {background:#2d8451;}
+.tab_contents_s ul li.navy:hover .img {background:#313959;}
+.tab_contents_s ul li.purple:hover .img {background:#a90056;}
+.tab_contents_s ul li.orange:hover .img {background: #ea5514}
+.tab_contents_s ul li.blue:hover .img {background:#2280d7}
+.tab_contents_s ul li.grey:hover .img {background:#333}
+.tab_contents_s ul li.red:hover .img {background:#ce171f;}
 
 
 
 @media all and (max-width:1200px){
+
+
+.tab_contents_s ul li {width:calc(100%/2 - 3rem);}
+
 
 
 }
@@ -28,12 +46,19 @@
 
 @media all and (max-width:920px){
 
-.tab_menu ul {margin-top:30px;}
-.tab_menu ul li a {font-size:1.1rem;}
 
 
-.portfolio .tab_contents_s ul li {width:calc(100%/2 - 2rem); padding:2rem 0;}
-.portfolio .tab_contents_s ul li a h2 {font-size:1rem;}
+
+}
+
+
+@media all and (max-width:760px){
+
+
+.tab_contents_s ul {gap:2rem 0;}
+.tab_contents_s ul li {width:100%;}
+.tab_contents_s ul li .thumb {max-height:300px;}
+.tab_contents_s ul li .inform {flex-direction:column;}
 
 
 }
