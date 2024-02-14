@@ -13,6 +13,9 @@
 .cont_group ul.flex li {width:calc(100%/2 - 2rem); margin-top:30px;}
 .cont_group ul li {margin-top:100px; text-align:center;}
 
+.cont_group ul.dog {display: flex;gap: 3rem;flex-wrap: wrap;justify-content: center;}
+.cont_group ul.dog li {width: calc(100%/5 - 3rem); margin-top:0;}
+
 
 a.list {display:block; max-width:180px; margin:50px auto; padding:15px 25px; border:1px solid #333; color:#333; font-size:1.1rem;}
 a.list:hover {background:#333; color:#fff; transition:.3s;}
