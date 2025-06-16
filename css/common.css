@@ -66,7 +66,7 @@
 }
 
 body, textarea, input, select, textarea, button {
-    font-family: 'NanumSquareNeo','LOTTERIACHAB', NanumGothic, "Nanum Gothic","돋움", "Bootstrap-icons", Dotum, Arial, sans-serif;
+    font-family: 'NanumSquareNeo', NanumGothic, "Nanum Gothic","돋움", "Bootstrap-icons", Dotum, Arial, sans-serif;
     font-weight: 400;
     line-height: 1.5;
 }
