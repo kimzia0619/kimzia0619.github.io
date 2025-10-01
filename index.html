@@ -3,9 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<title>김지아 포트폴리오</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+	<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/common.css">
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
 	<link rel="stylesheet" type="text/css" href="./css/layout.css">
@@ -28,12 +31,12 @@
 	</script>
 	<script>
 	$(document).ready(function(){
-		$("#go-top").hide();
+		$(".quick").hide();
 		$(window).scroll(function(){
 			if($(this).scrollTop() > 100){
-				$('#go-top').fadeIn(500);
+				$('.quick').fadeIn(500);
 				} else {
-					$('#go-top').fadeOut(500);
+					$('.quick').fadeOut(500);
 				}
 			});
 
@@ -41,72 +44,98 @@
 				$('html,body').animate({scrollTop : 0},800);
 				return false;
 			});
+		
 		});
 
 	</script>
+	<style>
+
+	</style>
 
 </head>
 <body>
 	<!--portfolio 시작-->
 	<div class="header">
-		<h1><a href="/">ZIAFOLIO</a></h1>
-		<a href="#none" id="go-top">
-			<i class="bi bi-arrow-up-short"></i>
-		</a>
-	</div>
-		
-	<div class="container">
-		<div class="tab_menu">
-			<ul class="flex">
-				<li class="active"><a><i class="bi bi-easel2"></i> 학교/기관</a></li>
-				<li><a><i class="bi bi-building"></i> 기업</a></li>
-				<li><a><i class="bi bi-hammer"></i> 기타</a></li>
-			</ul>
+		<div class="header_wrap">
+			<h1><a href="/">ZIAFOLIO</a></h1>
+			<div class="gnb">
+				<ul>
+					<li><a href="#projects">프로젝트</a></li>
+					<li><a href="#profile">프로필</a></li>
+					<li><a href="#contact">연락하기</a></li>
+				</ul>
+			</div>
+			<div class="quick">
+				<a href="#none" id="go-top">
+					<i class="bi bi-arrow-up-short"></i>
+				</a>
+			</div>
 		</div>
-		<div class="tab_contents_s">
-			<ul class="flex">
-				<li class="orange" onclick='window.location.href = "./html/aisoft.html"'>
-					<div class="thumb">
+	</div>
+	<div class="main_visual">
+		<div class="visual_wrap">
+			<div class="txt">
+				<h1>
+					<span>사용자의 마음을 움직이는</span>
+					<span>웹 디자이너 김지아입니다</span>
+				</h1>
+				<p>직관적인 UI와 매력적인 UX 설계를 통해 비즈니스의 가치를 높이는 디지털 경험을 만듭니다.</p>
+				<a href="#projects" class="btn">
+                    프로젝트 보기 <i class="bi bi-arrow-down-short"></i>
+                </a>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="projects">
+		<div class="project">
+			<h1 class="title">대표 프로젝트</h1>
+			<ul>
+				<li class="orange">
+					<div class="thumb" onclick='window.location.href = "./html/aisoft.html"'>
 						<div class="img">
 							<img src="./img/con15_01.jpg">
 						</div>
 					</div>
-					<div class="inform flex">
-						<span>동국대학교 AI소프트웨어융합학부</span>
-						<span>2024</span>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/aisoft.html"'>동국대학교 AI소프트웨어융합학부</h2>
+						<p>대학교 학부 공식 웹사이트 구축</p>
+						<div class="sort">
+							<span>UI/UX Design</span>
+							<span>반응형</span>
+							<span>Figma</span>
+						</div>
 					</div>
 				</li>
-				<li class="bluegreen" onclick='window.location.href = "./html/support.html"'>
-					<div class="thumb">
+				<li class="bluegreen">
+					<div class="thumb" onclick='window.location.href = "./html/support.html"'>
 						<div class="img">
 							<img src="./img/support01.jpg">
 						</div>
 					</div>
-					<div class="inform flex">
-						<span>대구광역시 보조기기센터</span>
-						<span>2024</span>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/support.html"'>대구광역시 보조기기센터</h2>
+						<p>사용자 경험 개선을 위한 기관 웹사이트 리뉴얼</p>
+						<div class="sort">
+							<span>UI/UX Design</span>
+							<span>반응형</span>
+							<span>Figma</span>
+						</div>
 					</div>
 				</li>
-				<li class="green" onclick='window.location.href = "./html/daegu.html"'>
-					<div class="thumb">
+				<li class="green">
+					<div class="thumb" onclick='window.location.href = "./html/daegu.html"'>
 						<div class="img">
 							<img src="./img/daegu01.png">
 						</div>
 					</div>
-					<div class="inform flex">
-						<span>대구대학교 메인페이지/서브페이지</span>
-						<span>2023</span>
-					</div>
-				</li>
-				<li class="green" onclick='window.location.href = "./html/expo.html"'>
-					<div class="thumb">
-						<div class="img">
-							<img src="./img/expo01.jpg">
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/daegu.html"'>대구대학교 메인페이지/서브페이지</h2>
+						<p>사용자 경험 개선을 위한 메인/서브 페이지 디자인 및 퍼블리싱</p>
+						<div class="sort">
+							<span>UI/UX Design</span>
+							<span>반응형</span>
+							<span>Photoshop</span>
 						</div>
-					</div>
-					<div class="inform flex">
-						<span>서울국제명상엑스포 서브페이지</span>
-						<span>2023</span>
 					</div>
 				</li>
 				<li class="blue" onclick='window.location.href = "./html/ibc.html"'>
@@ -115,186 +144,227 @@
 							<img src="./img/ibc02.jpg">
 						</div>
 					</div>
-					<div class="inform flex">
-						<span>한국뇌연구원 생물안전위원회</span>
-						<span>2023</span>
+					<div class="inform">
+						<h2>한국뇌연구원 생물안전위원회</h2>
+						<p>연구 위원회 공식 웹사이트 구축</p>
+						<div class="sort">
+							<span>UI/UX Design</span>
+							<span>반응형</span>
+							<span>Photoshop</span>
+						</div>
 					</div>
 				</li>
-				<li class="orange" onclick='window.location.href = "./html/dongguk.html"'>
-					<div class="thumb">
+			</ul>
+		</div>
+		<div class="tab_contents_s">
+			<ul>
+				<li class="orange">
+					<div class="thumb" onclick='window.location.href = "./html/dongguk.html"'>
 						<div class="img">
 							<img src="./img/dongguk01.png">
 						</div>
 					</div>
-					<div class="inform flex">
-						<span>동국대학교 컨텐츠</span>
-						<span>2022</span>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/dongguk.html"'>동국대학교 컨텐츠</h2>
 					</div>
 				</li>
-				<li class="orange" onclick='window.location.href = "./html/wise.html"'>
-					<div class="thumb">
+				<li class="orange">
+					<div class="thumb" onclick='window.location.href = "./html/wise.html"'>
 						<div class="img">
 							<img src="./img/wise01.png">
 						</div>
 					</div>
-					<div class="inform flex">
-						<span>동국대학교 WISE캠퍼스 컨텐츠</span>
-						<span>2022</span>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/wise.html"'>동국대학교 WISE캠퍼스 컨텐츠</h2>
 					</div>
 				</li>
-				<li class="orange" onclick='window.location.href = "./html/ctl.html"'>
-					<div class="thumb">
+				<li class="green">
+					<div class="thumb" onclick='window.location.href = "./html/expo.html"'>
 						<div class="img">
-							<img src="./img/ctl02.jpg">
+							<img src="./img/expo01.jpg">
 						</div>
 					</div>
-					<div class="inform flex">
-						<span>동국대학교 교수학습혁신센터</span>
-						<span>2022</span>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/expo.html"'>서울국제명상엑스포 서브페이지</h2>
 					</div>
 				</li>
-				<li class="purple" onclick='window.location.href = "./html/dhc_intro.html"'>
-					<div class="thumb">
-						<div class="img">
-							<img src="./img/dhc_intro02.jpg">
-						</div>
-					</div>
-					<div class="inform flex">
-						<span>대구보건대 인트로</span>
-						<span>2021</span>
-					</div>
-				</li>
-				<li class="purple" onclick='window.location.href = "./html/dhc50.html"'>
-					<div class="thumb">
-						<div class="img">
-							<img src="./img/dhc50_02.png">
-						</div>
-					</div>
-					<div class="inform flex">
-						<span>대구보건대 50주년</span>
-						<span>2021</span>
-					</div>
-				</li>
-				<li class="orange" onclick='window.location.href = "./html/with.html"'>
-					<div class="thumb">
-						<div class="img">
-							<img src="./img/with02.png">
-						</div>
-					</div>
-					<div class="inform flex">
-						<span>동국대학교 위드캠퍼스</span>
-						<span>2021</span>
-					</div>
-				</li>
-				<li class="navy" onclick='window.location.href = "./html/brain.html"'>
-					<div class="thumb">
-						<div class="img">
-							<img src="./img/brain02.png">
-						</div>
-					</div>
-					<div class="inform flex">
-						<span>한국뇌연구원(국문/영문)</span>
-						<span>2020</span>
-					</div>
-				</li>
-				<li class="purple" onclick='window.location.href = "./html/dhc_study.html"'>
-					<div class="thumb">
-						<div class="img">
-							<img src="./img/dhc_study02.png">
-						</div>
-					</div>
-					<div class="inform flex">
-						<span>대구보건대 내신성적산출</span>
-						<span>2019</span>
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="tab_contents_s" style="display: none;">
-			<ul class="flex">
-				<li class="purple" onclick='window.location.href = "./html/dtc.html"'>
-					<div class="thumb">
+				<li class="purple">
+					<div class="thumb" onclick='window.location.href = "./html/dtc.html"'>
 						<div class="img">
 							<img src="./img/con16_01.jpg">
 						</div>
 					</div>
-					<div class="inform flex">
-						<span>대구텍스타일콤플렉스</span>
-						<span>2023</span>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/dtc.html"'>대구텍스타일콤플렉스</h2>
 					</div>
 				</li>
-				<li class="grey" onclick='window.location.href = "./html/flex.html"'>
-					<div class="thumb">
+				<li class="orange">
+					<div class="thumb" onclick='window.location.href = "./html/ctl.html"'>
+						<div class="img">
+							<img src="./img/ctl02.jpg">
+						</div>
+					</div>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/ctl.html"'>동국대학교 교수학습혁신센터</h2>
+					</div>
+				</li>
+				<li class="navy">
+					<div class="thumb" onclick='window.location.href = "./html/brain.html"'>
+						<div class="img">
+							<img src="./img/brain02.png">
+						</div>
+					</div>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/brain.html"'>한국뇌연구원(국문/영문)</h2>
+					</div>
+				</li>
+				<li class="purple">
+					<div class="thumb" onclick='window.location.href = "./html/dhc_intro.html"'>
+						<div class="img">
+							<img src="./img/dhc_intro02.jpg">
+						</div>
+					</div>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/dhc_intro.html"'>대구보건대 인트로</h2>
+					</div>
+				</li>
+				<li class="purple">
+					<div class="thumb" onclick='window.location.href = "./html/dhc50.html"'>
+						<div class="img">
+							<img src="./img/dhc50_02.png">
+						</div>
+					</div>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/dhc50.html"'>대구보건대 50주년</h2>
+					</div>
+				</li>
+				<li class="orange">
+					<div class="thumb" onclick='window.location.href = "./html/with.html"'>
+						<div class="img">
+							<img src="./img/with02.png">
+						</div>
+					</div>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/with.html"'>동국대학교 위드캠퍼스</h2>
+					</div>
+				</li>
+				<li class="purple">
+					<div class="thumb" onclick='window.location.href = "./html/dhc_study.html"'>
+						<div class="img">
+							<img src="./img/dhc_study02.png">
+						</div>
+					</div>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/dhc_study.html"'>대구보건대 내신성적산출</h2>
+					</div>
+				</li>
+				<li class="grey">
+					<div class="thumb" onclick='window.location.href = "./html/flex.html"'>
 						<div class="img">
 							<img src="./img/flex02.png">
 						</div>
 					</div>
-					<div class="inform flex">
-						<span>스포츠플릭스</span>
-						<span>2021</span>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/flex.html"'>스포츠플릭스</h2>
 					</div>
 				</li>
-				<li class="blue" onclick='window.location.href = "./html/sein.html"'>
-					<div class="thumb">
+				<li class="blue">
+					<div class="thumb" onclick='window.location.href = "./html/sein.html"'>
 						<div class="img">
 							<img src="./img/sein02.png">
 						</div>
 					</div>
-					<div class="inform flex">
-						<span>세인블루텍</span>
-						<span>2021</span>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/sein.html"'>세인블루텍</h2>
 					</div>
 				</li>
-				<li class="red" onclick='window.location.href = "./html/eds.html"'>
-					<div class="thumb">
+				<li class="red">
+					<div class="thumb" onclick='window.location.href = "./html/eds.html"'>
 						<div class="img">
 							<img src="./img/eds02.png">
 						</div>
 					</div>
-					<div class="inform flex">
-						<span>eDS</span>
-						<span>2020</span>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/eds.html"'>eDS</h2>
 					</div>
 				</li>
-				<li class="brown" onclick='window.location.href = "./html/goleader.html"'>
-					<div class="thumb">
+				<li class="brown">
+					<div class="thumb" onclick='window.location.href = "./html/goleader.html"'>
 						<div class="img">
 							<img src="./img/goleader02.png">
 						</div>
 					</div>
-					<div class="inform flex">
-						<span>Go! Leader</span>
-						<span>2020</span>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/goleader.html"'>Go! Leader</h2>
 					</div>
 				</li>
-			</ul>
-		</div>
-		<div class="tab_contents_s" style="display: none;">
-			<ul class="flex">
-				<li class="green" onclick='window.location.href = "./html/dog.html"'>
-					<div class="thumb">
+				<li class="green">
+					<div class="thumb" onclick='window.location.href = "./html/dog.html"'>
 						<div class="img">
 							<img src="./img/dog01.png">
 						</div>
 					</div>
-					<div class="inform flex">
-						<span>꼬봉이와 진담이의 풍성한 우정</span>
-						<span>2021</span>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/dog.html"'>꼬봉이와 진담이의 풍성한 우정</h2>
 					</div>
 				</li>
-				<li class="green" onclick='window.location.href = "./html/mr.html"'>
-					<div class="thumb">
+				<li class="green">
+					<div class="thumb" onclick='window.location.href = "./html/mr.html"'>
 						<div class="img">
 							<img src="./img/mr.jpg">
 						</div>
 					</div>
-					<div class="inform flex">
-						<span>Mr. crocodile</span>
-						<span>2015</span>
+					<div class="inform">
+						<h2 onclick='window.location.href = "./html/mr.html"'>Mr. crocodile</h2>
 					</div>
 				</li>
 			</ul>
 		</div>
+		<div class="profile" id="profile">
+			<div class="profile_wrap">
+				<div class="img">
+					<img src="./img/profile01.jpg">
+				</div>
+				<div class="txt">
+					<h1>안녕하세요, 김지아입니다.</h1>
+					<p>저는 7년차 웹디자이너로, 미학적 아름다움과 사용자 편의성 사이의 균형을 찾는 데 열정을 가지고 있습니다.<br>
+					복잡한 문제를 단순하고 직관적인 디자인으로 풀어내는 것을 즐기며, 사용자와 비즈니스 모두에게 긍정적인 영향을 미치는 결과물을 만들기 위해 항상 노력합니다.</p>
+					<div class="skill">
+					<h2>연락처</h2>
+					<p>010·8293·0619</p>
+					<h2>이메일</h2>
+					<p>simpsons0855@naver.com</p>
+					<h2>학력</h2>
+					<p>계명대학교 텍스타일디자인 졸업</p>
+					<h2>경력</h2>
+					<p><span>2017 ~ 2018</span>(주)유비엔 디자인팀</p>
+					<p><span>2018 ~ 현재</span>(주)에스이코리아 개발팀</p>
+					
+
+					<h2>보유 기술</h2>
+					<ul>
+						<li><i class="fab fa-figma skill-icon" title="Figma"></i></li>
+						<li><i class="fab fa-adobe skill-icon" title="Adobe Creative Suite"></i></li>
+						<li><i class="fab fa-html5 skill-icon" title="HTML5"></i></li>
+						<li><i class="fab fa-css3-alt skill-icon" title="CSS3"></i></li>
+						<li><i class="fab fa-js-square skill-icon" title="JavaScript"></i></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+	</div>
+	<div class="contact" id="contact">
+			<div class="contact_wrap">
+				<h1>함께 일하고 싶으신가요?</h1>
+				<p>새로운 프로젝트, 협업 제안 등 어떤 이야기든 환영합니다.<br>편하게 연락 주세요!</p>
+				<a href="mailto:simpsons0855@naver.com" class="btn">simpsons0855@naver.com</a>
+			</div>
+		</div>
+	<div class="footer">
+		<p>© 2025 zia Kim. All Rights Reserved.</p>
 	</div>
 </body>
 </html>
