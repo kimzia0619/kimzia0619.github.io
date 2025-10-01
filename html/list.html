@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	<meta charset="utf-8">
-	<title>대구대학교</title>
+	<title>김지아 포트폴리오</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
@@ -15,12 +15,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script>
 	$(document).ready(function(){
-		$(".quick").hide();
+		$("#go-top").hide();
 		$(window).scroll(function(){
 			if($(this).scrollTop() > 100){
-				$('.quick').fadeIn(500);
+				$('#go-top').fadeIn(500);
 				} else {
-					$('.quick').fadeOut(500);
+					$('#go-top').fadeOut(500);
 				}
 			});
 
@@ -28,50 +28,54 @@
 				$('html,body').animate({scrollTop : 0},800);
 				return false;
 			});
-		
 		});
 
 	</script>
 </head>
 <body>
 <div class="header">
-	<div class="header_wrap">
-		<h1><a href="../index.html">ZIAFOLIO</a></h1>
-		<div class="quick">
-			<a href="../index.html" id="go-main" title="메인으로">
-				<i class="bi bi-reply-fill"></i>
+		<div class="header_wrap">
+			<h1><a href="/">ZIAFOLIO</a></h1>
+			<div class="gnb">
+				<ul>
+					<li class="active"><a href="#none">프로젝트</a></li>
+					<li><a href="/profile.html">프로필</a></li>
+					<li><a href="#contact">연락하기</a></li>
+				</ul>
+			</div>
+			<a href="#none" id="go-top" style="display: none;">
+				<i class="bi bi-arrow-up-short"></i>
 			</a>
-			<a href="#none" id="go-top" title="위로">
+			<a href="#none" id="go-top" style="display: none;">
 				<i class="bi bi-arrow-up-short"></i>
 			</a>
 		</div>
 	</div>
-</div>
 		
 <div class="container">
 	<div class="contents">
 		<div class="title_wrap">
 			<div class="title flex">
-				<h1>대구대학교 메인페이지/서브페이지</h1>
-				<a href="https://www.daegu.ac.kr/main" target="_blank"><i class="bi bi-house-door"></i><span>사이트 바로가기</span></a>
+				<h1>동국대학교 AI소프트웨어융합학부</h1>
+				<a href="https://cs.dongguk.edu/main" target="_blank"><i class="bi bi-house-door"></i><span>사이트 바로가기</span></a>
 			</div>
 			<div class="sort">
-				<span>디자인 100%</span>
-				<span>퍼블리싱 100%</span>
-				<span>반응형</span>
-				<span>대학교</span>
-				<span>2023</span>
-			</div>  
+					<span>디자인 100%</span>
+					<span>퍼블리싱 100%</span>
+					<span>반응형</span>
+					<span>대학교</span>
+					<span>2024</span>
+				</div>  
 		</div>
 	
 		<div class="cont_group">
-			<div class="monitor"><img src="../img/daegu00.png"></div>
+			<div class="monitor"><img src="../img/con15.png"></div>
 			<ul>
-				<li><img src="../img/daegu01.png"></li>
-				<li><img src="../img/daegu02.png"></li>
+				<li><img src="../img/con15_01.jpg"></li>
+				<li><img src="../img/con15_02.png"></li>
 			</ul>
 		</div>
-		<a href="../index.html" class="list text-center">목록으로</a>
+		<a href="/" class="list text-center">목록으로</a>
 	</div>
 </div>
 </body>

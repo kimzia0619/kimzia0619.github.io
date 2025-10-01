@@ -15,12 +15,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script>
 	$(document).ready(function(){
-		$("#go-top").hide();
+		$(".quick").hide();
 		$(window).scroll(function(){
 			if($(this).scrollTop() > 100){
-				$('#go-top').fadeIn(500);
+				$('.quick').fadeIn(500);
 				} else {
-					$('#go-top').fadeOut(500);
+					$('.quick').fadeOut(500);
 				}
 			});
 
@@ -28,29 +28,40 @@
 				$('html,body').animate({scrollTop : 0},800);
 				return false;
 			});
+		
 		});
 
 	</script>
 </head>
 <body>
 <div class="header">
-	<h1><a href="/">ZIAFOLIO</a></h1>
-	<a href="#none" id="go-top">
-<i class="bi bi-arrow-up-short"></i></a>
+	<div class="header_wrap">
+		<h1><a href="../index.html">ZIAFOLIO</a></h1>
+		<div class="quick">
+			<a href="../index.html" id="go-main" title="메인으로">
+				<i class="bi bi-reply-fill"></i>
+			</a>
+			<a href="#none" id="go-top" title="위로">
+				<i class="bi bi-arrow-up-short"></i>
+			</a>
+		</div>
+	</div>
 </div>
 		
 <div class="container">
 	<div class="contents">
-		<div class="title_wrap flex">
-			<div class="title">
+		<div class="title_wrap">
+			<div class="title flex">
 				<h1>동국대학교 위드캠퍼스</h1>
-				<ul class="inform flex">
-					<li>퍼블리싱 100%</li>
-					<li>디자인 100%</li>
-					<li>반응형</li>
-				</ul>
+				<a href="https://withcampus.dongguk.edu/" target="_blank"><i class="bi bi-house-door"></i><span>사이트 바로가기</span></a>
 			</div>
-			<a href="https://withcampus.dongguk.edu/" target="_blank">사이트 바로가기</a>
+			<div class="sort">
+				<span>디자인 100%</span>
+				<span>퍼블리싱 100%</span>
+				<span>반응형</span>
+				<span>대학교</span>
+				<span>2021</span>
+			</div>
 		</div>
 	
 		<div class="cont_group">
@@ -60,7 +71,7 @@
 				<li><img src="../img/with03.png"></li>
 			</ul>
 		</div>
-		<a href="/" class="list text-center">목록으로</a>
+		<a href="../index.html" class="list text-center">목록으로</a>
 	</div>
 </div>
 </body>
