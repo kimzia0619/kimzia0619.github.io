@@ -167,11 +167,6 @@
 .brain .popup .popup_wrap {border:5px solid #3c57a6; background: #232e33;}
 
 
-
-
-
-
-
 .popup .inform h1 a i {font-size:1.5rem; transition: .2s ease-in-out;}
 .popup .inform h1 a:hover i {transform: rotateY(180deg)}
 .popup .inform dl {color:#fff;margin-top: 2.5rem;}
@@ -335,7 +330,7 @@
   .popup .wrapper {padding:3rem 2rem;}
   .popup .monitor .img {width: 100%;}
   .popup .inform h1 {align-items: flex-start;}
-  .popup .inform h1 span {width:calc(100% - 70px); font-size:1.5rem;}
+  .popup .inform h1 span {width:auto; font-size:1.5rem;}
   .popup .img .wrapper .block {max-width: 100%;}
   .popup  .wrapper h2 {font-size:1.5rem;}
   .popup .color .tit {font-size: 1.1rem;}
