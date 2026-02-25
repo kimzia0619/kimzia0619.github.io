@@ -1,5 +1,38 @@
 @charset "utf-8";
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+@font-face {
+    font-family: 'KkuBulLim';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/BMkkubulimTTF-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+.arvo-regular {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arvo-bold {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.arvo-regular-italic {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.arvo-bold-italic {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-style: italic;
+}
 
 @font-face {
     font-family: 'NanumSquareNeo';
@@ -80,10 +113,10 @@ html{
   scroll-behavior: smooth;
 }
 
-body {background:#111827;}
+body {background:#12402f;}
 
 body, textarea, input, select, textarea, button {
-    font-family: 'NanumSquareNeo', NanumGothic, "Nanum Gothic","돋움", "Bootstrap-icons", Dotum, Arial, sans-serif;
+    font-family: 'Pretendard','Arvo', NanumGothic, "Nanum Gothic","돋움", "Bootstrap-icons", Dotum, Arial, sans-serif;
     font-weight: 400;
     line-height: 1.5;
 }
@@ -110,6 +143,8 @@ a {text-decoration:none;}
 a:hover,a:active {text-decoration:none; cursor:pointer;}
 a:focus {outline: 1px dotted #a0a0a0;}
 a img {border:0;}
+
+
 
 
 .flex {display:flex;}

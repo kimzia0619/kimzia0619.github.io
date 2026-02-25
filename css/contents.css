@@ -1,23 +1,21 @@
 
-.container {max-width:1536px; margin: 0 auto; color:#e5e7eb; overflow:hidden; padding-top:100px;}
-.title_wrap .title {justify-content: space-between; align-items:center;}
-.title_wrap a {display:block;padding:13px 25px;border:1px solid #fff;color: #333;font-size:1rem;border-radius: 50px;background: #fff;font-weight: bold;}
-.title_wrap a:hover {background:#333; color:#fff; transition:.3s;}
-.title_wrap a i {font-size:1.3rem; margin-right:8px; vertical-align:middle;}
-.contents .title h1 {font-size:2.5rem; font-weight:600;}
-.contents .title .inform {margin:30px 0;}
-.contents .title .inform li {margin-left:15px; border:1px solid #eee; padding:5px 15px; border-radius:30px;}
-.contents .title .inform li:first-child {margin-left:0;}
-.contents .title .inform li:before {content:"\F40A"; font-family:'bootstrap-icons'; font-size:1rem; color:#666; vertical-align:-2px;}
-.cont_group {margin-top:30px; background:#f8f8f8; padding:80px;}
-.cont_group img {max-width:100%;}
-.cont_group .monitor {max-width:60%; margin:0 auto;}
-.cont_group ul.flex {margin-top:100px; flex-wrap:wrap; gap:2rem; justify-content:space-between;}
-.cont_group ul.flex li {width:calc(100%/2 - 2rem); margin-top:30px;}
-.cont_group ul li {margin-top:100px; text-align:center;}
+.close {display:flex; justify-content:flex-end; font-size:5rem; color:#fff;}
+.contents {position:relative; padding:2rem 0;}
 
-.cont_group ul.dog {display: flex;gap: 3rem;flex-wrap: wrap;justify-content: center;}
-.cont_group ul.dog li {width: calc(100%/5 - 3rem); margin-top:0;}
+.wrapper {max-width:1700px; margin:0 auto;}
+
+.contents .monitor {display:flex; justify-content: space-between; margin-top:3rem;}
+.contents .monitor img {max-width:800px;}
+
+.contents .inform {width:calc(100% - 1000px);}
+.contents .inform h1 {color:#fff; display:flex; align-items:center;}
+.contents .inform h1 a {display:flex; justify-content:center; align-items:center; margin-left:1rem; width:60px; height:60px; border-radius:100%; background:#fff; color:#111;}
+.contents .inform h1 a i {font-size:1.5rem;}
+.contents .inform dl {color:#fff;margin-top: 2rem;}
+.contents .inform dl dt {font-weight:bold;font-size: 1.3rem;}
+.contents .inform dl dd {font-size: 1.1rem;opacity:.7;margin-top:10px;}
+
+.contents .color {padding:3rem 0; background:#f7f8ff; margin-top:3rem;}
 
 
 a.list {display:block; max-width:180px; margin:50px auto; padding:15px 25px;color:#333; background:#fff; border-radius:50px; font-size:1.1rem;}
@@ -25,9 +23,6 @@ a.list:hover {background:#333; color:#fff; transition:.3s;}
 
 
 @media all and (max-width:1200px){
-
-
-.container {padding:7rem 1.5rem !important;}
 
 .contents .title_wrap {flex-wrap:wrap;}
 .contents .title h1 {font-weight:800; font-size:1.8rem;}
