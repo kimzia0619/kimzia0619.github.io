@@ -3,34 +3,41 @@
 <head>
 	<meta charset="utf-8">
 	<title>김지아 포트폴리오</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes">
-	<script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/common.css">
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
 	<link rel="stylesheet" type="text/css" href="./css/layout.css">
-	<link rel="stylesheet" type="text/css" href="./css/sub.css">
-	<link rel="stylesheet" type="text/css" href="./css/contents.css">
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap-icons/bootstrap.css?_t=2">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-	<title>김지아 포트폴리오</title>
+	<script type="text/javascript" src="./js/bootstrap.js"></script>
+
+	<title>ZIAFOLIO</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.js"></script>
-	<script>
-		
-		$(document).on('click','.tab_menu li', function () {
-			$(this).siblings('li').removeClass('active');
-			$(this).addClass('active');
-			$('.tab_contents_s').hide();
-			$('.tab_contents_s:eq('+ $(this).index() +')').show();
-		});
+	<script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+	<script src="./js/layout.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 	
-	</script>
 	<script>
 	$(document).ready(function(){
+		$('.popup').hide();
+		$('.project ul li').click(function(){
+			$(this).find('.popup').show();
+			$('body').css({'overflow': 'hidden', 'height': '100%'});
+		});
+		$('.close').click(function(e){
+        e.stopPropagation(); // [중요] 클릭 이벤트가 li로 퍼지는 걸 막음
+        $('.popup').hide();
+		$('body').css({'overflow': 'auto', 'height': 'auto'});
+    });
+
+    
+
+
 		$(".quick").hide();
 		$(window).scroll(function(){
 			if($(this).scrollTop() > 100){
@@ -48,9 +55,7 @@
 		});
 
 	</script>
-	<style>
 
-	</style>
 
 </head>
 <body>
@@ -60,280 +65,1037 @@
 			<h1><a href="/">ZIAFOLIO</a></h1>
 			<div class="gnb">
 				<ul>
-					<li><a href="#projects">프로젝트</a></li>
-					<li><a href="#profile">프로필</a></li>
-					<li><a href="#contact">연락하기</a></li>
+					<li><a href="#projects">Project</a></li>
+					<li><a href="#profile">Profile</a></li>
 				</ul>
 			</div>
 			<div class="quick">
 				<a href="#none" id="go-top">
-					<i class="bi bi-arrow-up-short"></i>
+					Top
 				</a>
 			</div>
 		</div>
 	</div>
 	<div class="main_visual">
-		<div class="visual_wrap">
-			<div class="txt">
-				<h1>
-					<span>사용자의 마음을 움직이는</span>
-					<span>웹 디자이너 김지아입니다</span>
-				</h1>
-				<p>직관적인 UI와 매력적인 UX 설계를 통해 비즈니스의 가치를 높이는 디지털 경험을 만듭니다.</p>
-				<a href="#projects" class="btn">
-                    프로젝트 보기 <i class="bi bi-arrow-down-short"></i>
-                </a>
+		<div class="title">
+			<div class="greensock">
+				<small class="small_title">Web Design Portfolio</small>
+				<div class="logo"><small class="from">FROM</small><span>A</span> <small class="to">TO</small> <span>Z</span></div>
+				<div class="into">IA!</div>
 			</div>
 		</div>
 	</div>
+	<div class="ocean">
+	  <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none">
+	  <defs>
+		<path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+		</defs>
+		<use href="#wave-path" x="40" y="0" class="wave1" />
+		<use href="#wave-path" x="50" y="0" class="wave2" />
+	  </svg>
+	</div>
 	<div class="container" id="projects">
-		<div class="project">
-			<h1 class="title">대표 프로젝트</h1>
+		<div class="project wrapper first">
+			<h1 class="title">
+				Featured Projects
+				<span>대표 프로젝트</span>
+			</h1>
 			<ul>
-				<li class="orange">
-					<div class="thumb" onclick='window.location.href = "./html/aisoft.html"'>
-						<div class="img">
-							<img src="./img/con15_01.jpg">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/aisoft.html"'>동국대학교 AI소프트웨어융합학부</h2>
-						<p>대학교 학부 공식 웹사이트 구축</p>
-						<div class="sort">
-							<span>UI/UX Design</span>
-							<span>반응형</span>
-							<span>Figma</span>
-						</div>
-					</div>
-				</li>
-				<li class="bluegreen">
-					<div class="thumb" onclick='window.location.href = "./html/support.html"'>
-						<div class="img">
-							<img src="./img/support01.jpg">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/support.html"'>대구광역시 보조기기센터</h2>
-						<p>사용자 경험 개선을 위한 기관 웹사이트 리뉴얼</p>
-						<div class="sort">
-							<span>UI/UX Design</span>
-							<span>반응형</span>
-							<span>Figma</span>
-						</div>
-					</div>
-				</li>
-				<li class="green">
-					<div class="thumb" onclick='window.location.href = "./html/daegu.html"'>
-						<div class="img">
-							<img src="./img/daegu01.png">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/daegu.html"'>대구대학교 메인페이지/서브페이지</h2>
-						<p>사용자 경험 개선을 위한 메인/서브 페이지 디자인 및 퍼블리싱</p>
-						<div class="sort">
-							<span>UI/UX Design</span>
-							<span>반응형</span>
-							<span>Photoshop</span>
-						</div>
-					</div>
-				</li>
-				<li class="blue" onclick='window.location.href = "./html/ibc.html"'>
+				<li class="daegu cms">
 					<div class="thumb">
 						<div class="img">
-							<img src="./img/ibc02.jpg">
+							<span>
+								<img src="./img/main/logo_daegu.svg">
+								<b>학과 홈페이지</b>
+							</span>
 						</div>
 					</div>
-					<div class="inform">
-						<h2>한국뇌연구원 생물안전위원회</h2>
-						<p>연구 위원회 공식 웹사이트 구축</p>
-						<div class="sort">
-							<span>UI/UX Design</span>
-							<span>반응형</span>
-							<span>Photoshop</span>
+					<div class="popup" style="display:none;">
+						<div class="popup_wrap">
+							<a href="#none" class="close"></a>
+							<div class="view">
+								<div class="wrapper">
+									<div class="monitor">
+										<div class="img">
+											<img src="./img/con17.png">
+										</div>
+										<div class="inform">
+											<h1><span>대구대학교 학과 홈페이지</span><a href="https://hci.daegu.ac.kr/main" target="_blank"><i class="bi bi-house-door-fill"></i></a></h1>
+											<dl>
+												<dt>프로젝트명</dt>
+												<dd>CMS 학과 스킨 A 시안 작업</dd>
+											</dl>
+											<dl>
+												<dt>수행 기간</dt>
+												<dd>2024.12.09 ~ 2024.12.16</dd>
+											</dl>
+											<dl>
+												<dt>주요 역할</dt>
+												<dd>비주얼 컨셉 기획 및 시안 디자인</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div class="color">
+									<div class="wrapper flex">
+										<h2>색상 가이드</h2>
+										<div class="block">
+											<div>
+												<p class="tit">Main Color</p>
+												<ul>
+													<li style="background: #006940"></li>
+													<li style="background: #03ca90"></li>
+												</ul>
+											</div>
+											<div>
+												<p class="tit">Sub Color</p>
+												<ul>
+													<li style="background: #F8F9FA;"></li>
+													<li style="background: #333333;"></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="img">
+									<div class="wrapper flex">
+										<h2>미리보기</h2>
+										<div class="block">
+											<div class="thmb">
+												<img src="./img/daegu_cms01.jpg">
+											</div>
+											<div class="thmb mt50">
+												<img src="./img/daegu_cms02.jpg">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="ai">
+					<div class="thumb">
+						<div class="img">
+							<span>
+								<img src="./img/main/logo_dongguk.svg">
+								<b>AI소프트웨어융합학부</b>
+							</span>
+						</div>
+					</div>
+					<div class="popup" style="display:none;">
+						<div class="popup_wrap">
+							<a href="#none" class="close"></a>
+							<div class="view">
+								<div class="wrapper">
+									<div class="monitor">
+										<div class="img">
+											<img src="./img/con15.png">
+										</div>
+										<div class="inform">
+											<h1><span>동국대학교 AI소프트웨어융합학부</span><a href="https://cs.dongguk.edu/main" target="_blank"><i class="bi bi-house-door-fill"></i></a></h1>
+											<dl>
+												<dt>프로젝트명</dt>
+												<dd>동국대학교 AI소프트웨어융합학부 공식 웹사이트 구축 (반응형)</dd>
+											</dl>
+											<dl>
+												<dt>수행 기간</dt>
+												<dd>2024.05 ~ 2024.06 (약 1개월)</dd>
+											</dl>
+											<dl>
+												<dt>주요 역할</dt>
+												<dd>UX/UI 디자인 주도 및 웹 퍼블리싱 전담</dd>
+											</dl>
+											<dl>
+												<dt>업무 성과</dt>
+												<dd>브랜드 아이덴티티 기반 디자인 체계 구축</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div class="color">
+									<div class="wrapper flex">
+										<h2>색상 가이드</h2>
+										<div class="block">
+											<div>
+												<p class="tit">Main Color</p>
+												<ul>
+													<li style="background: #2280D7;"></li>
+													<li style="background: #72665E;"></li>
+												</ul>
+											</div>
+											<div>
+												<p class="tit">Sub Color</p>
+												<ul>
+													<li style="background: #F3F1F4;"></li>
+													<li class="black"></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="img">
+									<div class="wrapper flex">
+										<h2>미리보기</h2>
+										<div class="block">
+											<div class="thmb">
+												<img src="./img/con15_01.jpg">
+											</div>
+											<div class="thmb mt50">
+												<img src="./img/con15_02.png">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="support">
+					<div class="thumb">
+						<div class="img">
+							<span>
+								<img src="./img/main/logo_support.png">
+							</span>
+						</div>
+					</div>
+					<div class="popup" style="display:none;">
+						<div class="popup_wrap">
+							<a href="#none" class="close"></a>
+							<div class="view">
+								<div class="wrapper">
+									<div class="monitor">
+										<div class="img">
+											<img src="./img/support00.png">
+										</div>
+										<div class="inform">
+											<h1><span>대구광역시 보조기기센터</span><a href="https://datc.daegu.ac.kr/main" target="_blank"><i class="bi bi-house-door-fill"></i></a></h1>
+											<dl>
+												<dt>프로젝트명</dt>
+												<dd>대구광역시 보조기기센터 웹사이트 리뉴얼</dd>
+											</dl>
+											<dl>
+												<dt>수행 기간</dt>
+												<dd>2023.11 ~ 2024.02 (약 3개월)</dd>
+											</dl>
+											<dl>
+												<dt>주요 역할</dt>
+												<dd>UX/UI 디자인 주도 및 웹 퍼블리싱 전담</dd>
+											</dl>
+											<dl>
+												<dt>업무 성과</dt>
+												<dd>정보 전달력 강화, 메뉴 구조 재정비, 시각 디자인 현대화</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div class="color">
+									<div class="wrapper flex">
+										<h2>색상 가이드</h2>
+										<div class="block">
+											<div>
+												<p class="tit">Main Color</p>
+												<ul>
+													<li style="background: #004899;"></li>
+													<li style="background: linear-gradient(90deg, rgba(0,102,177,1) 0%, rgba(113,191,69,1) 100%)"></li>
+												</ul>
+											</div>
+											<div>
+												<p class="tit">Sub Color</p>
+												<ul>
+													<li style="background: #333333"></li>
+													<li style="background: #F8F9FA"></li>
+													<li style="background: #003366"></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="img">
+									<div class="wrapper flex">
+										<h2>미리보기</h2>
+										<div class="block">
+											<div class="thmb">
+												<img src="./img/support01.jpg">
+											</div>
+											<div class="thmb mt50">
+												<img src="./img/support02.png">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="daegu">
+					<div class="thumb">
+						<div class="img">
+							<span>
+								<img src="./img/main/logo_daegu.svg">
+							</span>
+						</div>
+					</div>
+					<div class="popup" style="display:none;">
+						<div class="popup_wrap">
+							<a href="#none" class="close"></a>
+							<div class="view">
+								<div class="wrapper">
+									<div class="monitor">
+										<div class="img">
+											<img src="./img/daegu00.png">
+										</div>
+										<div class="inform">
+											<h1><span>대구대학교</span><a href="https://www.daegu.ac.kr/main" target="_blank"><i class="bi bi-house-door-fill"></i></a></h1>
+											<dl>
+												<dt>프로젝트명</dt>
+												<dd>대구대학교 메인·서브 페이지 UI/UX 부분 리뉴얼 및 퍼블리싱 개선 수행</dd>
+											</dl>
+											<dl>
+												<dt>수행 기간</dt>
+												<dd>2023.04 ~ 2024.07 (약 3개월)</dd>
+											</dl>
+											<dl>
+												<dt>주요 역할</dt>
+												<dd>UX/UI 디자인 주도 및 웹 퍼블리싱 전담</dd>
+											</dl>
+											<dl>
+												<dt>업무 성과</dt>
+												<dd>기존 사이트 유지 구조 내에서 핵심 페이지 중심 리뉴얼 완료</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div class="color">
+									<div class="wrapper flex">
+										<h2>색상 가이드</h2>
+										<div class="block">
+											<div>
+												<p class="tit">Main Color</p>
+												<ul>
+													<li style="background: #248b54;"></li>
+													<li style="background: #047b6f;"></li>
+												</ul>
+											</div>
+											<div>
+												<p class="tit">Sub Color</p>
+												<ul>
+													<li style="background: #eff5f3"></li>
+													<li style="background: #2a2f3c"></li>
+													<li style="background: #434752"></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="img">
+									<div class="wrapper flex">
+										<h2>미리보기</h2>
+										<div class="block">
+											<div class="thmb">
+												<img src="./img/daegu01.png">
+											</div>
+											<div class="thmb mt50">
+												<img src="./img/daegu02.png">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li class="dtc">
+					<div class="thumb">
+						<div class="img">
+							<span>
+								<img src="./img/main/logo_dtc.svg">
+							</span>
+						</div>
+					</div>
+					<div class="popup" style="display:none;">
+						<div class="popup_wrap">
+							<a href="#none" class="close"></a>
+							<div class="view">
+								<div class="wrapper">
+									<div class="monitor">
+										<div class="img">
+											<img src="./img/con16.png">
+										</div>
+										<div class="inform">
+											<h1><span>대구텍스타일콤플렉스</span><a href="https://www.dtcomplex.org/intro/intro.html" target="_blank"><i class="bi bi-house-door-fill"></i></a></h1>
+											<dl>
+												<dt>프로젝트명</dt>
+												<dd>대구텍스타일콤플렉스 홈페이지 리뉴얼</dd>
+											</dl>
+											<dl>
+												<dt>수행 기간</dt>
+												<dd>2023.06 ~ 2023.10 (약 4개월)</dd>
+											</dl>
+											<dl>
+												<dt>주요 역할</dt>
+												<dd>UX/UI 디자인 주도 및 웹 퍼블리싱 전담</dd>
+											</dl>
+											<dl>
+												<dt>업무 성과</dt>
+												<dd>브랜드 아이덴티티 기반 디자인 체계 구축</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div class="color">
+									<div class="wrapper flex">
+										<h2>색상 가이드</h2>
+										<div class="block">
+											<div>
+												<p class="tit">Main Color</p>
+												<ul>
+													<li style="background: #CF0061;"></li>
+												</ul>
+											</div>
+											<div>
+												<p class="tit">Sub Color</p>
+												<ul>
+													<li style="background: #f5f7f9"></li>
+													<li style="background: #222"></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="img">
+									<div class="wrapper flex">
+										<h2>미리보기</h2>
+										<div class="block">
+											<div class="thmb">
+												<img src="./img/con16_01.jpg">
+											</div>
+											<div class="thmb mt50">
+												<img src="./img/con16_02.png">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="ibc">
+					<div class="thumb">
+						<div class="img">
+							<span>
+								<img src="./img/main/logo_brain.svg">
+								<b>생명안전위원회</b>
+							</span>
+						</div>
+					</div>
+					<div class="popup" style="display:none;">
+						<div class="popup_wrap">
+							<a href="#none" class="close"></a>
+							<div class="view">
+								<div class="wrapper">
+									<div class="monitor">
+										<div class="img">
+											<img src="./img/ibc00.png">
+										</div>
+										<div class="inform">
+											<h1><span>한국뇌연구원 생명안전위원회</span><a href="https://ibc.kbri.re.kr/ibcMain" target="_blank"><i class="bi bi-house-door-fill"></i></a></h1>
+											<dl>
+												<dt>프로젝트명</dt>
+												<dd>한국뇌연구원 생명안전위원회 신규 심의관리 시스템 구축</dd>
+											</dl>
+											<dl>
+												<dt>수행 기간</dt>
+												<dd>2022.12 ~ 2023.03 (약 4개월)</dd>
+											</dl>
+											<dl>
+												<dt>주요 역할</dt>
+												<dd>UX/UI 디자인 주도 및 웹 퍼블리싱 전담</dd>
+											</dl>
+											<dl>
+												<dt>업무 성과</dt>
+												<dd>연구원 내부에서 심의 신청·조회·승인·관리가 가능한 기능 전반 구현 및 UI/UX 설계 참여</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div class="color">
+									<div class="wrapper flex">
+										<h2>색상 가이드</h2>
+										<div class="block">
+											<div>
+												<p class="tit">Main Color</p>
+												<ul>
+													<li style="background: #2181d8;"></li>
+													<li style="background: #0e4194;"></li>
+												</ul>
+											</div>
+											<div>
+												<p class="tit">Sub Color</p>
+												<ul>
+													<li style="background: #e5f2f8"></li>
+													<li style="background: #272626"></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="img">
+									<div class="wrapper flex">
+										<h2>미리보기</h2>
+										<div class="block">
+											<div class="thmb">
+												<img src="./img/ibc02.jpg">
+											</div>
+											<div class="thmb mt50">
+												<img src="./img/ibc01.png">
+											</div>
+											<div class="thmb mt50">
+												<img src="./img/ibc04.jpg">
+											</div>
+											<div class="thmb mt50">
+												<img src="./img/ibc03.png">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="dongguk">
+					<div class="thumb">
+						<div class="img">
+							<span>
+								<img src="./img/main/logo_dongguk.svg">
+								
+							</span>
+						</div>
+					</div>
+					<div class="popup" style="display:none;">
+						<div class="popup_wrap">
+							<a href="#none" class="close"></a>
+							<div class="view">
+								<div class="wrapper">
+									<div class="monitor">
+										<div class="img">
+											<img src="./img/dongguk00.png">
+										</div>
+										<div class="inform">
+											<h1><span>동국대학교</span><a href="https://www.dongguk.edu/main" target="_blank"><i class="bi bi-house-door-fill"></i></a></h1>
+											<dl>
+												<dt>프로젝트명</dt>
+												<dd>동국대학교 웹 콘텐츠 기획 및 구현</dd>
+											</dl>
+											<dl>
+												<dt>수행 기간</dt>
+												<dd>2022.03 ~ 2022.07 (약 4개월)</dd>
+											</dl>
+											<dl>
+												<dt>주요 역할</dt>
+												<dd>대학 콘텐츠의 시각적 UI 설계 및 반응형 웹 퍼블리싱 구현</dd>
+											</dl>
+											<dl>
+												<dt>업무 성과</dt>
+												<dd>교육 콘텐츠의 시각적 체계 수립 및 정보 접근성 향상을 통한 사용자 편의성 제고</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div class="color">
+									<div class="wrapper flex">
+										<h2>색상 가이드</h2>
+										<div class="block">
+											<div>
+												<p class="tit">Main Color</p>
+												<ul>
+													<li style="background: #ea5514;"></li>
+													<li style="background: #E47821;"></li>
+												</ul>
+											</div>
+											<div>
+												<p class="tit">Sub Color</p>
+												<ul>
+													<li style="background: #58595B"></li>
+													<li style="background: #222222"></li>
+													<li style="background: #F4F4F4"></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="img">
+									<div class="wrapper flex">
+										<h2>미리보기</h2>
+										<div class="block">
+											<div class="thmb">
+												<img src="./img/dongguk01.png">
+											</div>
+											<div class="thmb mt50">
+												<img src="./img/dongguk02.png">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="expo">
+					<div class="thumb">
+						<div class="img">
+							<span>
+								<img src="./img/main/logo_expo.png">
+								<b>서울국제명상엑스포</b>
+							</span>
+						</div>
+					</div>
+					<div class="popup" style="display:none;">
+						<div class="popup_wrap">
+							<a href="#none" class="close"></a>
+							<div class="view">
+								<div class="wrapper">
+									<div class="monitor">
+										<div class="img">
+											<img src="./img/expo00.png">
+										</div>
+										<div class="inform">
+											<h1><span>서울국제명상엑스포</span><a href="https://mind.dongguk.edu/front/" target="_blank"><i class="bi bi-house-door-fill"></i></a></h1>
+											<dl>
+												<dt>프로젝트명</dt>
+												<dd>서울국제명상엑스포 서브페이지 및 컨텐츠 작업</dd>
+											</dl>
+											<dl>
+												<dt>수행 기간</dt>
+												<dd>2023.08 ~ 2023.11 (약 3개월)</dd>
+											</dl>
+											<dl>
+												<dt>주요 역할</dt>
+												<dd>서브페이지 디자인 가이드 수립 및 디바이스 최적화를 위한 프론트엔드 퍼블리싱</dd>
+											</dl>
+											<dl>
+												<dt>업무 성과</dt>
+												<dd>시각적 일관성 확보 및 매끄러운 사용자 경험(UX) 구현</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div class="color">
+									<div class="wrapper flex">
+										<h2>색상 가이드</h2>
+										<div class="block">
+											<div>
+												<p class="tit">Main Color</p>
+												<ul>
+													<li style="background: #068564;"></li>
+
+												</ul>
+											</div>
+											<div>
+												<p class="tit">Sub Color</p>
+												<ul>
+													<li style="background: #eff8f7;"></li>
+													<li style="background: #f6f6f6;"></li>
+													<li style="background: #000;"></li>
+
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="img">
+									<div class="wrapper flex">
+										<h2>미리보기</h2>
+										<div class="block">
+											<div class="thmb">
+												<img src="./img/expo01.jpg">
+											</div>
+											<div class="thmb mt50">
+												<img src="./img/expo02.png">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="dhc_intro">
+					<div class="thumb">
+						<div class="img">
+							<span>
+								<img src="./img/main/logo_dhc.svg">
+								<b>인트로</b>
+							</span>
+						</div>
+					</div>
+					<div class="popup" style="display:none;">
+						<div class="popup_wrap">
+							<a href="#none" class="close"></a>
+							<div class="view">
+								<div class="wrapper">
+									<div class="monitor">
+										<div class="img">
+											<img src="./img/dhc_intro01.png">
+										</div>
+										<div class="inform">
+											<h1><span>대구보건대 인트로</span><a href="https://www.dhc.ac.kr/" target="_blank"><i class="bi bi-house-door-fill"></i></a></h1>
+											<dl>
+												<dt>프로젝트명</dt>
+												<dd>대구보건대 인트로 페이지 메인 비주얼 및 레이아웃 설계</dd>
+											</dl>
+											<dl>
+												<dt>수행 기간</dt>
+												<dd>2021.08.30 ~ 2021.09.06</dd>
+											</dl>
+											<dl>
+												<dt>주요 역할</dt>
+												<dd>비주얼 컨셉 기획 및 시안 디자인</dd>
+											</dl>
+											<dl>
+												<dt>업무 성과</dt>
+												<dd>주요 메뉴(국제교류, 입학 등)로의 명확한 정보 배분 및 시각적 위계 확립</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div class="color">
+									<div class="wrapper flex">
+										<h2>색상 가이드</h2>
+										<div class="block">
+											<div>
+												<p class="tit">Main Color</p>
+												<ul>
+													<li style="background: #af0055;"></li>
+													<li style="background: #EE478D;"></li>
+
+												</ul>
+											</div>
+											<div>
+												<p class="tit">Sub Color</p>
+												<ul>
+													<li style="background: #F1F3F9;"></li>
+													<li style="background: #6b74a0;"></li>
+													<li style="background: #f3f1f4;"></li>
+
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="img">
+									<div class="wrapper flex">
+										<h2>미리보기</h2>
+										<div class="block">
+											<div class="thmb">
+												<img src="./img/dhc_intro02.png">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				
+				<li class="brain">
+					<div class="thumb">
+						<div class="img">
+							<span>
+								<img src="./img/main/logo_brain.svg">
+								<b>한국뇌연구원</b>
+							</span>
+						</div>
+					</div>
+					<div class="popup" style="display:none;">
+						<div class="popup_wrap">
+							<a href="#none" class="close"></a>
+							<div class="view">
+								<div class="wrapper">
+									<div class="monitor">
+										<div class="img">
+											<img src="./img/brain01.png">
+										</div>
+										<div class="inform">
+											<h1><span>한국뇌연구원</span><a href="https://kbri.re.kr/new/pages/main/" target="_blank"><i class="bi bi-house-door-fill"></i></a></h1>
+											<dl>
+												<dt>프로젝트명</dt>
+												<dd>한국뇌연구원 국문/영문 메인&서브 페이지 퍼블리싱 (pc버전)</dd>
+											</dl>
+											<dl>
+												<dt>수행 기간</dt>
+												<dd>2020.08 ~ 2020.10 (약 2개월)</dd>
+											</dl>
+											<dl>
+												<dt>주요 역할</dt>
+												<dd>디자인 주도 및 웹 퍼블리싱</dd>
+											</dl>
+											<dl>
+												<dt>업무 성과</dt>
+												<dd>기존 사이트 유지 구조 내에서 핵심 페이지 중심 리뉴얼 완료</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div class="color">
+									<div class="wrapper flex">
+										<h2>색상 가이드</h2>
+										<div class="block">
+											<div>
+												<p class="tit">Main Color</p>
+												<ul>
+													<li style="background: #313959;"></li>
+													<li style="background: #3c57a6;"></li>
+
+												</ul>
+											</div>
+											<div>
+												<p class="tit">Sub Color</p>
+												<ul>
+													<li style="background: #ececec;"></li>
+													<li style="background: #2e3138;"></li>
+													<li style="background: #e5e5f8;"></li>
+
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="img">
+									<div class="wrapper flex">
+										<h2>미리보기</h2>
+										<div class="block">
+											<div class="thmb">
+												<img src="./img/brain02.png">
+												<div class="thmb">
+													<img src="./img/brain03.png">
+												</div>
+												<div class="thmb">
+													<img src="./img/brain04.png">
+												</div>
+												<div class="thmb">
+													<img src="./img/brain05.png">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="dhc_study">
+					<div class="thumb">
+						<div class="img">
+							<span>
+								<img src="./img/main/logo_dhc.svg">
+								<b>내신성적산출</b>
+							</span>
+						</div>
+					</div>
+					<div class="popup" style="display:none;">
+						<div class="popup_wrap">
+							<a href="#none" class="close"></a>
+							<div class="view">
+								<div class="wrapper">
+									<div class="monitor">
+										<div class="img">
+											<img src="./img/con07.png">
+										</div>
+										<div class="inform">
+											<h1><span>대구보건대 내신성적산출</span><a href="https://apply.dhc.ac.kr/calc" target="_blank"><i class="bi bi-house-door-fill"></i></a></h1>
+											<dl>
+												<dt>프로젝트명</dt>
+												<dd>대구보건대 입학 내신성적산출 프로그램</dd>
+											</dl>
+											<dl>
+												<dt>수행 기간</dt>
+												<dd>2019</dd>
+											</dl>
+											<dl>
+												<dt>주요 역할</dt>
+												<dd>적응형 디자인 및 성적 산출 시스템 퍼블리싱</dd>
+											</dl>
+											<dl>
+												<dt>업무 성과</dt>
+												<dd>시스템 신뢰도 확보 및 성적 입력 프로세스에서의 사용자 가독성 최적화</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div class="color">
+									<div class="wrapper flex">
+										<h2>색상 가이드</h2>
+										<div class="block">
+											<div>
+												<p class="tit">주요 색상</p>
+												<ul>
+													<li style="background: #a00144"></li>
+												</ul>
+											</div>
+											<div>
+												<p class="tit">강조 색상</p>
+												<ul>
+													<li style="background: #f5f5f5;"></li>
+													<li style="background: #f1ede6;"></li>
+													<li style="background: #5A6378;"></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="img">
+									<div class="wrapper flex">
+										<h2>미리보기</h2>
+										<div class="block">
+											<div class="thmb">
+												<img src="./img/dhc_study02.png">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="zia" style="display: none;">
+					<div class="thumb">
+						<div class="img">
+							<span>
+								<strong>ZIAFOLIO</strong>
+								<b>개인작업</b>
+							</span>
+						</div>
+					</div>
+					<div class="popup" style="display:none;">
+						<div class="popup_wrap">
+							<a href="#none" class="close"></a>
+							<div class="view">
+								<div class="wrapper">
+									<div class="monitor">
+										<div class="img">
+											<img src="./img/dongguk00.png">
+										</div>
+										<div class="inform">
+											<h1><span>동국대학교</span><a href="https://www.dongguk.edu/main" target="_blank"><i class="bi bi-house-door-fill"></i></a></h1>
+											<dl>
+												<dt>프로젝트명</dt>
+												<dd></dd>
+											</dl>
+											<dl>
+												<dt>수행 기간</dt>
+												<dd></dd>
+											</dl>
+											<dl>
+												<dt>주요 역할</dt>
+												<dd></dd>
+											</dl>
+											<dl>
+												<dt>업무 성과</dt>
+												<dd></dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div class="color">
+									<div class="wrapper flex">
+										<h2>색상 가이드</h2>
+										<div class="block">
+											<div>
+												<p class="tit">주요 색상</p>
+												<ul>
+													<li style="background: #e5f2f8"></li>
+													<li style="background: #272626"></li>
+												</ul>
+											</div>
+											<div>
+												<p class="tit">강조 색상</p>
+												<ul>
+													<li style="background: #2181d8;"></li>
+													<li style="background: #0e4194;"></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="img">
+									<div class="wrapper flex">
+										<h2>미리보기</h2>
+										<div class="block">
+											<div class="thmb">
+												<img src="./img/dongguk01.png">
+											</div>
+											<div class="thmb mt50">
+												<img src="./img/dongguk02.png">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</li>
 			</ul>
 		</div>
-		<div class="tab_contents_s">
-			<ul>
-				<li class="orange">
-					<div class="thumb" onclick='window.location.href = "./html/dongguk.html"'>
-						<div class="img">
-							<img src="./img/dongguk01.png">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/dongguk.html"'>동국대학교 컨텐츠</h2>
-					</div>
-				</li>
-				<li class="orange">
-					<div class="thumb" onclick='window.location.href = "./html/wise.html"'>
-						<div class="img">
-							<img src="./img/wise01.png">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/wise.html"'>동국대학교 WISE캠퍼스 컨텐츠</h2>
-					</div>
-				</li>
-				<li class="green">
-					<div class="thumb" onclick='window.location.href = "./html/expo.html"'>
-						<div class="img">
-							<img src="./img/expo01.jpg">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/expo.html"'>서울국제명상엑스포 서브페이지</h2>
-					</div>
-				</li>
-				<li class="purple">
-					<div class="thumb" onclick='window.location.href = "./html/dtc.html"'>
-						<div class="img">
-							<img src="./img/con16_01.jpg">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/dtc.html"'>대구텍스타일콤플렉스</h2>
-					</div>
-				</li>
-				<li class="orange">
-					<div class="thumb" onclick='window.location.href = "./html/ctl.html"'>
-						<div class="img">
-							<img src="./img/ctl02.jpg">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/ctl.html"'>동국대학교 교수학습혁신센터</h2>
-					</div>
-				</li>
-				<li class="navy">
-					<div class="thumb" onclick='window.location.href = "./html/brain.html"'>
-						<div class="img">
-							<img src="./img/brain02.png">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/brain.html"'>한국뇌연구원(국문/영문)</h2>
-					</div>
-				</li>
-				<li class="purple">
-					<div class="thumb" onclick='window.location.href = "./html/dhc_intro.html"'>
-						<div class="img">
-							<img src="./img/dhc_intro02.jpg">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/dhc_intro.html"'>대구보건대 인트로</h2>
-					</div>
-				</li>
-				<li class="purple">
-					<div class="thumb" onclick='window.location.href = "./html/dhc50.html"'>
-						<div class="img">
-							<img src="./img/dhc50_02.png">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/dhc50.html"'>대구보건대 50주년</h2>
-					</div>
-				</li>
-				<li class="orange">
-					<div class="thumb" onclick='window.location.href = "./html/with.html"'>
-						<div class="img">
-							<img src="./img/with02.png">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/with.html"'>동국대학교 위드캠퍼스</h2>
-					</div>
-				</li>
-				<li class="purple">
-					<div class="thumb" onclick='window.location.href = "./html/dhc_study.html"'>
-						<div class="img">
-							<img src="./img/dhc_study02.png">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/dhc_study.html"'>대구보건대 내신성적산출</h2>
-					</div>
-				</li>
-				<li class="grey">
-					<div class="thumb" onclick='window.location.href = "./html/flex.html"'>
-						<div class="img">
-							<img src="./img/flex02.png">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/flex.html"'>스포츠플릭스</h2>
-					</div>
-				</li>
-				<li class="blue">
-					<div class="thumb" onclick='window.location.href = "./html/sein.html"'>
-						<div class="img">
-							<img src="./img/sein02.png">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/sein.html"'>세인블루텍</h2>
-					</div>
-				</li>
-				<li class="red">
-					<div class="thumb" onclick='window.location.href = "./html/eds.html"'>
-						<div class="img">
-							<img src="./img/eds02.png">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/eds.html"'>eDS</h2>
-					</div>
-				</li>
-				<li class="brown">
-					<div class="thumb" onclick='window.location.href = "./html/goleader.html"'>
-						<div class="img">
-							<img src="./img/goleader02.png">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/goleader.html"'>Go! Leader</h2>
-					</div>
-				</li>
-				<li class="green">
-					<div class="thumb" onclick='window.location.href = "./html/dog.html"'>
-						<div class="img">
-							<img src="./img/dog01.png">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/dog.html"'>꼬봉이와 진담이의 풍성한 우정</h2>
-					</div>
-				</li>
-				<li class="green">
-					<div class="thumb" onclick='window.location.href = "./html/mr.html"'>
-						<div class="img">
-							<img src="./img/mr.jpg">
-						</div>
-					</div>
-					<div class="inform">
-						<h2 onclick='window.location.href = "./html/mr.html"'>Mr. crocodile</h2>
-					</div>
-				</li>
-			</ul>
+
+		<div class="project with">
+			<h1 class="title">
+				Worked with
+				<span>함께한 기업</span>
+			</h1>
+			<div class="banner">
+				<div class="banner_wrap">
+					<span class="logo"><img src="./img/main/banner_dongguk.svg"></span>
+					<span class="logo"><img src="./img/main/banner_wise.png"></span>
+					<span class="logo"><img src="./img/main/banner_daegu.svg"></span>
+					<span class="logo"><img src="./img/main/banner_datc.png"></span>
+					<span class="logo"><img src="./img/main/banner_dhc.svg"></span>
+					<span class="logo"><img src="./img/main/banner_dtc.svg"></span>
+					
+				</div>
+			</div>
+			<div class="banner">
+				<div class="banner_wrap">
+					<span class="logo"><img src="./img/main/banner_kbri.png"></span>
+					<span class="logo"><img src="./img/main/banner_tb.svg"></span>
+					<span class="logo"><img src="./img/main/banner_museum.png"></span>
+					<span class="logo"><img src="./img/main/banner_light.png"></span>
+					<span class="logo"><img src="./img/main/banner_with.png"></span>
+					<span class="logo"><img src="./img/main/banner_expo.png"></span>
+				</div>
+			</div>
+			<div class="banner">
+				<div class="banner_wrap">
+					<span class="logo"><img src="./img/main/banner_goleader.png"></span>
+					<span class="logo"><img src="./img/main/banner_eds.png"></span>
+					<span class="logo"><img src="./img/main/banner_sein.png"></span>
+					<span class="logo"><img src="./img/main/banner_water.png"></span>
+					<span class="logo"><img src="./img/main/banner_sea.png"></span>
+					<span class="logo"><img src="./img/main/banner_sport.png"></span>
+				</div>
+			</div>
 		</div>
-		<div class="profile" id="profile">
+		
+		<div class="project wrapper" id="profile">
+			<h1 class="title">
+				Profile
+				<span>프로필</span>
+			</h1>
 			<div class="profile_wrap">
 				<div class="img">
-					<img src="./img/profile01.jpg">
+					<img src="./img/main/profile.jpg">
 				</div>
 				<div class="txt">
-					<h1>안녕하세요, 김지아입니다.</h1>
+					<h1><span>From A to Z</span>
+					웹디자이너 김지아 입니다.</h1>
 					<p>저는 7년차 웹디자이너로, 미학적 아름다움과 사용자 편의성 사이의 균형을 찾는 데 열정을 가지고 있습니다.<br>
 					복잡한 문제를 단순하고 직관적인 디자인으로 풀어내는 것을 즐기며, 사용자와 비즈니스 모두에게 긍정적인 영향을 미치는 결과물을 만들기 위해 항상 노력합니다.</p>
 					<div class="skill">
-					<h2>연락처</h2>
+					<!-- <h2>연락처</h2>
 					<p>010·8293·0619</p>
 					<h2>이메일</h2>
-					<p>simpsons0855@naver.com</p>
+					<p>simpsons0855@naver.com</p> -->
 					<h2>학력</h2>
 					<p>계명대학교 텍스타일디자인 졸업</p>
 					<h2>경력</h2>
@@ -356,13 +1118,7 @@
 
 		
 	</div>
-	<div class="contact" id="contact">
-			<div class="contact_wrap">
-				<h1>함께 일하고 싶으신가요?</h1>
-				<p>새로운 프로젝트, 협업 제안 등 어떤 이야기든 환영합니다.<br>편하게 연락 주세요!</p>
-				<a href="mailto:simpsons0855@naver.com" class="btn">simpsons0855@naver.com</a>
-			</div>
-		</div>
+
 	<div class="footer">
 		<p>© 2025 zia Kim. All Rights Reserved.</p>
 	</div>
