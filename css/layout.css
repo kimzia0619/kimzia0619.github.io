@@ -14,8 +14,8 @@
 
 
 .quick {position:fixed;right: 2rem; bottom:2rem;}
-.quick a {display:block; position:relative; width: 50px;height: 50px; border-radius:100%; color:#111; text-align:center; line-height:50px; font-size:.8rem; font-weight:bold;}
-#go-top {background: #fff; box-shadow: 1px 1px 11px 0px #ddd;}
+.quick a {display:block; position:relative; width: 50px;height: 50px; border-radius:100%; color:#111; text-align:center; line-height:50px; font-weight:bold;}
+#go-top {background: #fff;}
 #go-top i {color: #000000;}
 #go-main {background: linear-gradient(to right, #8BC34A, #4CAF50); box-shadow:1px 1px 11px 0px #8BC34A;}
 #go-main i {color:#fff;font-size: 1.5rem;}
