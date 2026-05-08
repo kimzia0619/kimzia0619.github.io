@@ -48,6 +48,12 @@
 .project ul li:hover .thumb .img:before {transform:scale(1.2); opacity:.2;}
 .project ul li:hover .thumb .img:after{opacity:1;}
 
+
+.project ul li.edulife .thumb .img:before {background:url("../img/main/img_edulife02.jpg")center 0 no-repeat;background-size:cover;}
+.project ul li.edulife .thumb .img:after{background:#ea5514;}
+.project ul li.edulife .thumb .img img {max-width:60%;}
+
+
 .project ul li.daegu.cms .thumb .img:before {background:url("../img/main/daegu_cms03.jpg")center 0 no-repeat;background-size:cover;}
 
 .project ul li.ai .thumb .img:before {background:url("../img/main/img_software02.jpg")center 0 no-repeat;background-size:cover;}
@@ -155,8 +161,8 @@
 .ibc .popup .inform h1 a {background:#0071cd;}
 .ibc .popup .popup_wrap {border:5px solid #0071cd; background: #232e33;}
 
-.dongguk .popup .inform h1 a {background:#ea5514;}
-.dongguk .popup .popup_wrap {border:5px solid #ea5514;}
+.dongguk .popup .inform h1 a,.edulife .popup .inform h1 a {background:#ea5514;}
+.dongguk .popup .popup_wrap,.edulife .popup .popup_wrap {border:5px solid #ea5514;}
 
 .expo .popup .inform h1 a {background:#068564;}
 
