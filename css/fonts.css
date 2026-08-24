@@ -100,17 +100,20 @@
     font-family: 'GmarketSans';
     font-style: normal;
     font-weight: 100;
+	font-display: swap;
     src: url('./fonts/woff/GmarketSansLight.woff') format('woff')
 }
 @font-face {
     font-family: 'GmarketSans';
     font-style: normal;
     font-weight:400;
+	font-display: swap;
     src: url('./fonts/woff/GmarketSansM.woff') format('woff')
 }
 @font-face {
     font-family: 'GmarketSans';
     font-style: normal;
     font-weight:bold;
+	font-display: swap;
     src: url('./fonts/woff/GmarketSansBold.woff') format('woff')
 }
